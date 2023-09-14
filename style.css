@@ -1,0 +1,93 @@
+.body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+#resultContainer .boxes .box .icon,
+#resultContainer .boxes .box .amount {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#resultContainer .boxes .box .hash,
+#resultContainer .boxes .box .fromTo {
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+span {
+    word-wrap: break-word;
+
+}
+
+#resultContainer .boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#resultContainer .boxes .box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 1%;
+}
+
+#resultContainer .boxes .box:last-child {
+    border-bottom: 0;
+}
+
+#resultContainer {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+#resultContainer>p {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 1% 0% 1% 1%;
+    margin: 0;
+}
+
+ion-icon[name="arrow-down"] {
+    color: #008000;
+}
+
+ion-icon[name="arrow-up"] {
+    color: #ff0000;
+}
+
+#resultContainer ion-icon {
+    font-size: 2em;
+}
+
+#resultContainer .transactions .fromTo {
+    display: flex;
+    flex-direction: column;
+}
+
+#resultContainer .amount span {
+    padding: 1%;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#viewMoreButton {
+    width: 100%;
+}
