@@ -22,7 +22,7 @@ class Data
         $toBeReturned = false;
         $header = [
             'Content-Type: application/json',
-            'Authorization: Bearer ' . self::API_KEY, // Your API key
+            'Authorization: Bearer ' . self::API_KEY,
         ];
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $apiURL);

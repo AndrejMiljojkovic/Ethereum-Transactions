@@ -9,11 +9,9 @@ $(document).ready(function () {
         var startBlock = $('#startBlock').val();
         var dueDate = $('#balanceDate').val();
         var parts = dueDate.split('-');
-
         if (parts.length === 3) {
-            // Create a UTC Date object with the input year, month, and day, and set the time to 00:00:00 UTC
             var year = parseInt(parts[0], 10);
-            var month = parseInt(parts[1], 10) - 1; // Months are zero-indexed
+            var month = parseInt(parts[1], 10) - 1;
             var day = parseInt(parts[2], 10);
             var dateObject = new Date(Date.UTC(year, month, day, 0, 0, 0, 0));
             dueDate = dateObject.getTime();
@@ -28,6 +26,7 @@ $(document).ready(function () {
                 dueDate: dueDate
             },
             success: function (data) {
+                $('#boxesTransaction').empty();
                 $.each(data.transactions, function (index, transaction) {
                     var newItem = '<div class="box">';
                     newItem += '<div class="icon">';
